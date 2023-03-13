@@ -11,9 +11,15 @@ public class MainActivityTest {
         UserValidation testObject = new UserValidation();
 
         //Act
-        boolean result = testObject.isValidAge(17);
+        boolean resultSeventeen = testObject.isValidAge(17);
+        boolean resultEighteen = testObject.isValidAge(18);
+        boolean resultZero = testObject.isValidAge(0);
+        boolean resultOne = testObject.isValidAge(1);
 
         //Assert
-        assertTrue(result);
+        assertFalse(resultSeventeen);
+        assertTrue(resultEighteen);
+        assertFalse(resultZero);
+        assertFalse(resultOne);
     }
 }
